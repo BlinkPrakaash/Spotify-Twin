@@ -1,0 +1,85 @@
+section	{
+	position: absolute;
+	margin: 3rem 17rem;
+	padding: 0;
+	width: 82vw;
+	height: 90vh;
+	font-size: 1.3rem;
+/* 	border: 2px solid blue;  */
+}
+
+.grad {
+	margin: 0;
+	padding: 0;
+	width: auto;
+	height: 50vh;
+	background: linear-gradient(0deg,rgba(2,0,36,1)0% , rgba(29,185,84,1)100%);
+}
+#lik {
+	position: absolute;
+	margin: 7rem 5rem;
+	padding: 0;
+	width: 5rem;
+	height: 5rem;
+	color: #FFF;
+}
+.grad .cont {
+	position: absolute;
+	margin: 7rem 20rem;
+	padding: 0;
+}
+.grad .cont h1 {
+	margin: 0 3rem;
+	font-size: 4rem;
+}
+.grad .cont h5 {
+	margin: 0 3.3rem;
+
+}
+h3 {
+	position: absolute;
+	margin: 4rem 27rem;
+	padding: 0;
+}
+h6 {
+	position: inherit;
+	margin: 8rem 30rem;
+	padding: 0;
+}
+button {
+	position: absolute;
+	margin: 11rem 34rem;
+	height: 2.5rem;
+	width: 10rem;
+	color: #1DB954;
+	cursor: pointer;
+	border-radius: 20px;
+	font-family: 'Montserrat', sans-serif;
+}
+button:hover{
+	color: #FFF;
+	background: #1DB954;
+	transition: .5s ease;
+}
+@media screen and (max-width: 425px) {
+	section {
+		margin: 0 5rem;
+	}
+	.grad .cont h5 ,h6{
+		display: none;
+	}
+	.grad #lik {
+		margin: 4rem 6rem;
+	}
+	.grad .cont h1 {
+		margin: 8rem -14rem;
+		font-size: 2rem;
+	}
+	h3 {
+		margin: 4rem;
+		font-size: 1rem;
+	}
+	button {
+		margin: 8rem 6rem;
+	}
+}

@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
+
+body {
+	margin: 0;
+	padding: 0;
+	color: #FFF;
+	background: #000;
+	max-width: 100vh;
+	max-height: 100vh;
+	font-size: 1.1rem;
+	overflow: hidden;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	width: 15rem;
+	height: 45rem;
+	float: left;
+}
+#spot {
+	position: absolute;
+	margin: .1rem .5rem;
+	padding: 0;
+	width: auto;
+	height: 7rem;
+}
+#top {
+	margin: 0;
+	padding: 6rem 0 0 .8rem;
+	line-height: 2em;
+	flex-direction: column;
+}
+a ,li {
+	color: #1DB954;
+	padding: .5rem 0;
+	list-style: none;
+	text-decoration: none;
+}
+a:hover {
+	color: #FFF;
+	transition: .5s ease-in-out;
+}
+i {
+	position: relative;
+	margin: 0;
+	padding: 1rem;
+	color: #1DB954;
+	width: 10px;
+	height: 10px;
+}
+
+section	{
+	position: absolute;
+	margin: 3rem 17rem;
+	padding: 0;
+	width: 82vw;
+	height: 90vh;
+	font-size: 1.3rem;
+
+/* 	border: 2px solid blue;  */
+}
+h1 {
+	position: relative;
+	margin: 0 30rem;
+	padding: 0 0 3rem;
+}
+.clr {
+	color: #1DB954;
+}
+h3 {
+	margin: 0;
+	padding: 1rem 0;
+}
+.scrl {
+	position: absolute;
+	margin: 0;
+	padding: 1rem 2rem;
+	width: 78vw;
+	height: 85vh;
+	overflow: hidden;
+	overflow-y: scroll;
+
+/*    border: 2px solid white;  */
+}
+::-webkit-scrollbar {
+	display: none;
+}
+.box1 {
+	position: relative;
+	margin: 0 0 2rem;
+	padding: 2rem 0;
+	width: 100%;
+	height: 10rem;
+	float: left;
+	overflow: hidden;
+	white-space: nowrap;
+
+/*	overflow-y: scroll;
+	border: 2px solid green;  */
+}
+.pic {
+	position: inherit;
+	margin: 0 1.3rem;
+	padding: .1rem;
+	height: 10rem;
+	width: 10rem;
+	background: black;
+	float: left;
+
+}
+.pic img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+@media screen and (max-width: 425px) {
+	body {
+		overflow: hidden;
+	}
+	nav ul li span, h5 ,#spot {
+		display: none;
+	}
+	section {
+		margin: 0 5rem;
+		padding: 0;
+		overflow-y: scroll;
+	}
+	section h1 {
+		margin: 1rem 2rem;
+		padding: 0;
+	}
+	nav ul li {
+		margin: 0 -1rem;
+		padding: 0;
+		line-height: 4rem;
+		display: flex;
+		flex-direction: row;
+	}
+}

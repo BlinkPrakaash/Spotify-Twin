@@ -1,0 +1,50 @@
+#not {
+	position: absolute;
+	margin: 7rem 34rem;
+	padding: 0;
+	color: #FFF;
+}
+.bar {
+	position: absolute;
+	margin: 17rem 25rem;
+	padding: 0;
+	text-align: center;
+}
+.bar h1 {
+	position: relative;
+	margin: 0;
+}
+.bar h6 {
+	position: relative;
+	margin: -1rem 0;
+}
+.bar button {
+	position: absolute;
+	margin: 3rem -5rem;
+	padding: 0;
+	width: 10rem;
+	height: 2.7rem;
+	color: #1DB954;
+	cursor: pointer;
+	border: none;
+	border-radius: 20px;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+}
+.bar button:hover {
+	color: #FFF;
+	background: #1DB954;
+	transition: .5s ease;
+}
+@media screen and (max-width: 425px) {
+	section #not {
+		margin: 3rem 8rem;
+	}
+	.bar h6 {
+		display: none;
+	}
+	.bar {
+		margin: 10rem 5rem;
+		font-size: 2rem;
+	}
+}

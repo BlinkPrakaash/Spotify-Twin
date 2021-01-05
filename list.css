@@ -1,0 +1,74 @@
+
+.gra {
+	margin: 0;
+	padding: 0;
+	width: 85vw;
+	height: 50vh;
+	background: linear-gradient(0deg,rgba(2,0,36,1)0% , rgba(29,185,84,1)100%);
+}
+#hp {
+	position: absolute;
+	margin: 8rem 7rem;
+	padding: 0;
+	width: 5rem;
+	height: 5rem;
+	color: #FFF;
+}
+.gra .cont {
+	position: absolute;
+	margin: 7rem 20rem;
+	padding: 0;
+}
+.gra .cont h1 {
+	margin: 0 3rem;
+	font-size: 4rem;
+}
+.gra .cont h5 {
+	margin: 0 3.2rem;
+
+}
+h2 {
+	position: absolute;
+	margin: 2% 35%;
+	padding: 0;
+}
+h6 {
+	position: absolute;
+	margin: 8% 38%;
+	padding: 0;
+}
+button {
+	position: absolute;
+	margin: 13% 43%;
+	height: 2.5rem;
+	width: 10rem;
+	color: #1DB954;
+	cursor: pointer;
+	border: none;
+	border-radius: 20px;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+}
+button:hover{
+	color: #FFF;
+	background: #1DB954;
+	transition: .5s ease;
+}
+@media screen and (max-width: 425px) {
+	.gra #hp {
+		margin: 5rem 8rem;
+	}
+	.gra .cont h5 ,h2{
+		display: none;
+	}
+	.gra .cont h1 {
+		margin: 7rem -12rem;
+		font-size: 1rem;
+	}
+	h6 {
+		margin: 2rem;
+	}
+	button {
+		margin: 5rem 6rem;
+	}
+}

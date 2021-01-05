@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+<meta charset="UTF-8">
+
+<title>Spotify Authentication Spoof</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script>
+  window.console = window.console || function(t) {};
+</script>
+  
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+
+<body translate="no" >
+  <h1>Spotify</h1>
+  <p>Testing Purpose</p>
+  <main id="app">
+  <template v-if="me">
+    {{ me }}
+  </template>
+  <template v-else>
+    <button @click="login">Login with Spotify</button>
+  </template>
+</main>
+
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17-beta.0/vue.js'></script> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/localforage/1.7.3/localforage.min.js'></script>
+
+<script id="rendered-js" >
+const app = new Vue({
+  el: '#app',
+  data() {
+    return {
+      client_id: '0561fee8b0b34ac1aa590347de6099ae',
+      scopes: 'user-top-read',
+      redirect_uri: 'https://spotify-twin.netlify.app/',
+      me: null };
+
+  },
+  methods: {
+    login() {
+      let popup = window.open(`https://accounts.spotify.com/authorize?client_id=${this.client_id}&response_type=token&redirect_uri=${this.redirect_uri}&scope=${this.scopes}&show_dialog=true`, 'Login with Spotify', 'width=800,height=600');
+
+      window.spotifyCallback = payload => {
+        // alert(payload)
+
+        popup.close();
+
+        fetch('https://api.spotify.com/v1/me', {
+          headers: {
+            'Authorization': `Bearer ${payload}` } }).
+
+        then(response => {
+          return response.json();
+        }).then(data => {
+          this.me = data;
+        });
+      };
+    } },
+
+  mounted() {
+    this.token = window.location.hash.substr(1).split('&')[0].split("=")[1];
+
+    if (this.token) {
+      // alert(this.token)
+
+      window.opener.spotifyCallback(this.token);
+    }
+  } });
+//# sourceURL=pen.js
+</script>
+
+<style type="text/css">
+  body {
+    color: #FFF;
+    background: #000;
+    overflow: hidden;
+    font-family: 'Montserrat',sans-serif;
+  }
+  h1 {
+    margin: 15rem 45% 0;
+    font-size: 4rem;
+    color: #FFF;
+  }
+  p {
+    margin: 0 44rem;
+    text-align: center;
+    color: #1DB954;
+    font-size: 1.3rem;
+  }
+  button {
+    position: absolute;
+    margin: 3rem 45% 0;
+    height: 2.5rem;
+    width: 13rem;
+    color: #1DB954;
+    cursor: pointer;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+  }
+  button:hover{
+    color: #FFF;
+    background: #1DB954;
+    transition: .5s ease;
+  }
+</style>
+</body>
+
+</html>
+ 
