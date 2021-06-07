@@ -1,3 +1,1 @@
 # Spotify-Twin
-CLONE OF SPOTIFY
-!   TESTING PURPOSE   !
