@@ -1,2 +1,3 @@
 # Spotify-Twin
-Spotify AUTH TOKEN Clone (test)
+
+An Clone of Spotify Web Player and it uses spotify user authentication API, grabs the user id details and etc...
